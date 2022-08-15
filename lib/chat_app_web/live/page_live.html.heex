@@ -1,0 +1,17 @@
+<div>
+    <h1>LiveChat</h1><a href="/clock" style=" margin-top:10px; margin-left:780px;">Time?</a>
+    <h4>Display</h4>
+    <div class="messages" style="border: 2px solid rgb(27, 25, 25); height: 300px; overflow: scroll; margin-bottom: 8px;">
+      <%= for m <- @messages do %>
+      
+        <p style="margin: 2px;"><b><%= m.name %></b>: <%= m.text %></p>
+      <% end %>
+      
+    </div>
+    
+    <p style="padding: 4px; font-size:20px;">Type here 👇</p>
+    <form phx-submit="send">
+      <input type="text" name="text" style=" border:2px solid black" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
